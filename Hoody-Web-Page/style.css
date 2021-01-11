@@ -1,0 +1,355 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+.hoodypage {
+  display: inline-block;
+  height: 980px;
+  width: 100%;
+  background-color: #f1f1ef;
+}
+
+.portfolio {
+  display: inline-block;
+  position: relative;
+  margin-left: 200px;
+  margin-top: 100px;
+  color: black;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid #7ebdb4;
+  padding-bottom: 10px;
+}
+.info {
+  z-index: 5;
+  float: right;
+  margin-right: 150px;
+  margin-top: 250px;
+}
+.name {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  color: gray;
+  font-weight: 100;
+  font-family: "Dosis", sans-serif;
+  z-index: 5;
+  border-bottom: 1px solid #7ebdb4;
+  padding-right: 100px;
+  padding-bottom: 10px;
+}
+
+.job {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Dosis", sans-serif;
+  z-index: 5;
+}
+.bottominfo {
+  position: relative;
+  color: gray;
+  z-index: 2;
+}
+.list {
+  position: relative;
+  float: right;
+  margin-right: 300px;
+  margin-top: 110px;
+}
+.list a {
+  text-decoration: none;
+  margin-right: 80px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  transition: all ease-in-out;
+  font-weight: 500;
+}
+.list a:nth-child(4) {
+  padding: 10px;
+  border: 1px solid #7ebdb4;
+  border-radius: 20px;
+}
+.list a:hover {
+  font-weight: 400;
+  border-bottom: 1px solid #7ebdb4;
+  transition: all ease-in-out 0.2s;
+  color: #7ebdb4;
+}
+
+.foto {
+  position: absolute;
+  display: inline-block;
+  left: 0em;
+  top: 260px;
+}
+.secondpage {
+  display: inline-block;
+  text-align: center;
+  height: 700px;
+  width: 100%;
+  background-color: white;
+}
+.services {
+  display: inline-block;
+  position: relative;
+  margin-top: 100px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  border-bottom: 1px solid #7ebdb4;
+  padding-bottom: 10px;
+}
+
+.boxes {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 80px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.boxes .box {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-right: 60px;
+  background-color: #f7f7f2;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.boxes .box:nth-child(3) {
+  margin-right: 0px;
+}
+
+.boxes .box:nth-child(2) {
+  background-color: rgb(236, 231, 186);
+}
+
+.boxes .box .infobox {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+}
+
+.boxes .box .finfobox {
+  position: relative;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.8rem;
+  text-align: left;
+  color: gray;
+  transition: all ease-in-out 0.3s;
+}
+
+.boxes .box:hover {
+  cursor: pointer;
+  background-color: #7ebdb4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+
+.boxes .box:hover .finfobox {
+  color: white;
+}
+
+#navBar {
+  display: none;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #7ebdb4;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 100%;
+  margin: -100px 0 0 -50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+#menu li:hover {
+  border-bottom: 1px solid #7ebdb4;
+}
+
+@media only screen and (max-width: 1600px) {
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  .portfolio {
+    display: none;
+  }
+  .hoodypage {
+    text-align: center;
+    width: 100%;
+  }
+  .list {
+    float: none;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .name {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  .info {
+    margin-right: 0;
+    float: none;
+    margin-top: 100px;
+  }
+
+  .foto {
+    position: relative;
+    top: 0;
+    margin-top: 30px;
+  }
+
+  .foto img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #navBar {
+    display: block;
+  }
+
+  .list {
+    display: none;
+  }
+}
